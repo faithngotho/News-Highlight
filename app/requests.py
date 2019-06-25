@@ -65,7 +65,7 @@ def get_articles(id):
 	'''
 	Function that processes the articles and returns a list of articles objects
 	'''
-	get_articles_url ='https://newsapi.org/v2/everything?sources=bloomberg&apiKey=990515c7c8d0488cbf0d1246db5094b6'
+	
 
 	with urllib.request.urlopen(get_articles_url) as url:
 		get_articles_data = url.read()
