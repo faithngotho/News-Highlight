@@ -55,7 +55,8 @@ def process_sources(sources_list):
 		country = source_item.get('country')
 
 
-		
+		sources_object = Sources(id,name,description,url,category,country,language)
+		sources_results.append(sources_object)
 
 
 	return sources_results
