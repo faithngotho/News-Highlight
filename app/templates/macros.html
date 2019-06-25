@@ -1,0 +1,73 @@
+{% macro displaySourceList(source_list) %}
+
+	{% for source_row in source_list |batch(4)%}
+        <div class="row">
+        	
+	        	
+            {% for sources in source_row %}
+	            <div class="col-md-3">
+		           
+		            <div class="panel panel-default">
+						<div class="panel-heading">
+							<a href="/articles/{{sources.id}}">
+							    {{ sources.name}}
+					        </a>
+						</div>
+						<div class="panel-body">
+							<p>
+								{{ sources.description |truncate(100)}}
+
+							</p>
+							<a href="/articles/{{sources.id}}" class="btn btn-success btn-sm">Visit {{sources.name}}</a>
+						</div>
+						
+		
+					</div>
+		        </div>
+            {% endfor %}
+	        	
+        </div>
+    {% endfor %}
+
+{% endmacro %}
+
+{% macro displayArticleList(articles_list) %}
+
+	{% for articles in articles_list%}
+        <div class="row">    	 	
+            
+	            <div class="col-md-3">
+		            <div class="panel panel-default">
+						<div class="panel-heading">
+							
+						</div>
+						<div class="panel-body">
+								<p>
+										{{ articles.urlToImage}}
+		
+									</p>
+							<p>
+								{{ articles.title}}
+
+							</p>
+							<p>
+								{{ articles.description}}
+
+							</p>
+							<p>
+									published on {{ articles.publishedAt}}
+	
+								</p>
+							<a href={{articles.url}} class="btn btn-success btn-sm">Read MOre</a>
+						</div>
+						
+		
+					</div>
+		        </div>
+            
+	        	
+        </div>
+    {% endfor %}
+
+{% endmacro %}
+
