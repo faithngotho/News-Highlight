@@ -3,7 +3,7 @@ This is where you are updated on past news by clicking on news web.
 
 ## BY FAITH NGOTHO
 
-##Beahaviour
+## Beahaviour
 
 1. Display news sources	On page load	List of various news sources is displayed per category
 2. Display articles from a news source	Click a news source	Redirected to a page with a list of articles from the source
@@ -15,7 +15,7 @@ This is where you are updated on past news by clicking on news web.
 2. Boostrap
 3. Flask
 
-##Set-up and Installation
+## Set-up and Installation
 - Clone the Repo
 - Edit the start.sh file with your api key from the news.org website
 - Install python 3.6
